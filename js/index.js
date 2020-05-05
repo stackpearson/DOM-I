@@ -52,6 +52,9 @@ navOne[5].innerHTML = (siteContent["nav"]["nav-item-6"])
 let buttonContent = document.querySelector('button');
 buttonContent.innerHTML = (siteContent["cta"]["button"])
 
+let ctaHeader = document.querySelector('h1');
+ctaHeader.innerHTML = (siteContent["cta"]["h1"])
+
 let codeImage = document.getElementById('cta-img');
 codeImage.setAttribute('src', siteContent["cta"]["img-src"])
 
