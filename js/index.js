@@ -44,10 +44,13 @@ logo.setAttribute('src', siteContent["nav"]["img-src"])
 let navOne = document.querySelectorAll('a');
 navOne[0].innerHTML = (siteContent["nav"]["nav-item-1"])
 navOne[1].innerHTML = (siteContent["nav"]["nav-item-2"])
-navOne[2].innerHTML = ('href', siteContent["nav"]["nav-item-3"])
-navOne[3].innerHTML = ('href', siteContent["nav"]["nav-item-4"])
-navOne[4].innerHTML = ('href', siteContent["nav"]["nav-item-5"])
-navOne[5].innerHTML = ('href', siteContent["nav"]["nav-item-6"])
+navOne[2].innerHTML = (siteContent["nav"]["nav-item-3"])
+navOne[3].innerHTML = (siteContent["nav"]["nav-item-4"])
+navOne[4].innerHTML = (siteContent["nav"]["nav-item-5"])
+navOne[5].innerHTML = (siteContent["nav"]["nav-item-6"])
+
+let buttonContent = document.querySelector('button');
+buttonContent.innerHTML = (siteContent["cta"]["button"])
 
 let codeImage = document.getElementById('cta-img');
 codeImage.setAttribute('src', siteContent["cta"]["img-src"])
