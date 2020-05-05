@@ -42,21 +42,48 @@ let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 let navOne = document.querySelectorAll('a');
-navOne[0].innerHTML = (siteContent["nav"]["nav-item-1"])
-navOne[1].innerHTML = (siteContent["nav"]["nav-item-2"])
-navOne[2].innerHTML = (siteContent["nav"]["nav-item-3"])
-navOne[3].innerHTML = (siteContent["nav"]["nav-item-4"])
-navOne[4].innerHTML = (siteContent["nav"]["nav-item-5"])
-navOne[5].innerHTML = (siteContent["nav"]["nav-item-6"])
+navOne[0].textContent = (siteContent["nav"]["nav-item-1"])
+navOne[1].textContentL = (siteContent["nav"]["nav-item-2"])
+navOne[2].textContent = (siteContent["nav"]["nav-item-3"])
+navOne[3].textContent = (siteContent["nav"]["nav-item-4"])
+navOne[4].textContent = (siteContent["nav"]["nav-item-5"])
+navOne[5].itextContent = (siteContent["nav"]["nav-item-6"])
 
 let buttonContent = document.querySelector('button');
-buttonContent.innerHTML = (siteContent["cta"]["button"])
+buttonContent.textContent = (siteContent["cta"]["button"])
 
 let ctaHeader = document.querySelector('h1');
-ctaHeader.innerHTML = (siteContent["cta"]["h1"])
+ctaHeader.textContent = (siteContent["cta"]["h1"])
 
 let codeImage = document.getElementById('cta-img');
 codeImage.setAttribute('src', siteContent["cta"]["img-src"])
+
+let mainContentHeaders = document.querySelectorAll('h4');
+mainContentHeaders[0].textContent = (siteContent["main-content"]["features-h4"])
+mainContentHeaders[1].textContent = (siteContent["main-content"]["about-h4"])
+mainContentHeaders[2].textContent = (siteContent["main-content"]["services-h4"])
+mainContentHeaders[3].textContent = (siteContent["main-content"]["product-h4"])
+mainContentHeaders[4].textContent = (siteContent["main-content"]["vision-h4"])
+
+let mainContentImg = document.getElementById('middle-img');
+mainContentImg.setAttribute('src', siteContent["main-content"]["middle-img-src"])
+
+let mainContentText = document.querySelectorAll('p');
+mainContentText[0].textContent = (siteContent["main-content"]["features-content"])
+mainContentText[1].textContent = (siteContent["main-content"]["about-content"])
+mainContentText[2].textContent = (siteContent["main-content"]["services-content"])
+mainContentText[3].textContent = (siteContent["main-content"]["product-content"])
+mainContentText[4].textContent = (siteContent["main-content"]["vision-content"])
+
+let footerHeader = document.querySelectorAll('h4');
+footerHeader[5].textContent = (siteContent["contact"]["contact-h4"])
+
+let footerText = document.querySelectorAll('p');
+footerText[5].textContent = (siteContent["contact"]["address"])
+footerText[6].textContent = (siteContent["contact"]["phone"])
+footerText[7].textContent = (siteContent["contact"]["email"])
+footerText[8].textContent = (siteContent["footer"]["copyright"])
+
 
 
 
