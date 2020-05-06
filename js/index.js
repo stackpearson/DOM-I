@@ -43,11 +43,30 @@ logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 let navOne = document.querySelectorAll('a');
 navOne[0].textContent = (siteContent["nav"]["nav-item-1"])
-navOne[1].textContentL = (siteContent["nav"]["nav-item-2"])
+navOne[1].textContent = (siteContent["nav"]["nav-item-2"])
 navOne[2].textContent = (siteContent["nav"]["nav-item-3"])
 navOne[3].textContent = (siteContent["nav"]["nav-item-4"])
 navOne[4].textContent = (siteContent["nav"]["nav-item-5"])
-navOne[5].itextContent = (siteContent["nav"]["nav-item-6"])
+navOne[5].textContent = (siteContent["nav"]["nav-item-6"])
+navOne[0].style.color = "green";
+navOne[1].style.color = "green";
+navOne[2].style.color = "green";
+navOne[3].style.color = "green";
+navOne[4].style.color = "green";
+navOne[5].style.color = "green";
+
+let theNav = document.querySelector('nav');
+let newNavElements = document.querySelector('nav')
+newNavElements1 = document.createElement('a')
+newNavElements1.textContent = "New Nav1"
+newNavElements1.style.color = "green";
+newNavElements2 = document.createElement('a')
+newNavElements2.textContent = "New Nav2"
+newNavElements2.style.color = "green";
+theNav.prepend(newNavElements1)
+theNav.appendChild(newNavElements2)
+
+
 
 let buttonContent = document.querySelector('button');
 buttonContent.textContent = (siteContent["cta"]["button"])
@@ -84,6 +103,4 @@ footerText[6].textContent = (siteContent["contact"]["phone"])
 footerText[7].textContent = (siteContent["contact"]["email"])
 footerText[8].textContent = (siteContent["footer"]["copyright"])
 
-
-
-
+// let navColor = 
