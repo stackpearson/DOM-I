@@ -41,32 +41,39 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
+/// Updating the nav bar ////
 let navOne = document.querySelectorAll('a');
+
 navOne[0].textContent = (siteContent["nav"]["nav-item-1"])
 navOne[1].textContent = (siteContent["nav"]["nav-item-2"])
 navOne[2].textContent = (siteContent["nav"]["nav-item-3"])
 navOne[3].textContent = (siteContent["nav"]["nav-item-4"])
 navOne[4].textContent = (siteContent["nav"]["nav-item-5"])
 navOne[5].textContent = (siteContent["nav"]["nav-item-6"])
-navOne[0].style.color = "green";
-navOne[1].style.color = "green";
-navOne[2].style.color = "green";
-navOne[3].style.color = "green";
-navOne[4].style.color = "green";
-navOne[5].style.color = "green";
+
+navOne.forEach(el => {
+  el.style.color = "green";
+})
+
+// Adding new elements to the nav bar //
 
 let theNav = document.querySelector('nav');
 let newNavElements = document.querySelector('nav')
 newNavElements1 = document.createElement('a')
-newNavElements1.textContent = "New Nav1"
 newNavElements1.style.color = "green";
+newNavElements1.textContent = "New Nav1"
+
 newNavElements2 = document.createElement('a')
-newNavElements2.textContent = "New Nav2"
-newNavElements2.style.color = "green";
+newNavElements2.textContent = "Dark Mode"
+newNavElements2.style.color = "white";
+newNavElements2.style.backgroundColor = "grey";
+newNavElements2.style.borderRadius = "5px";
+// newNavElements2.setAttribute('id', 'darkModeButton');
+newNavElements2.setAttribute('onclick', 'darkMode()');
 theNav.prepend(newNavElements1)
 theNav.appendChild(newNavElements2)
 
-
+// Updating upper content region //
 
 let buttonContent = document.querySelector('button');
 buttonContent.textContent = (siteContent["cta"]["button"])
@@ -77,7 +84,10 @@ ctaHeader.textContent = (siteContent["cta"]["h1"])
 let codeImage = document.getElementById('cta-img');
 codeImage.setAttribute('src', siteContent["cta"]["img-src"])
 
+// Updating main content region //
+
 let mainContentHeaders = document.querySelectorAll('h4');
+
 mainContentHeaders[0].textContent = (siteContent["main-content"]["features-h4"])
 mainContentHeaders[1].textContent = (siteContent["main-content"]["about-h4"])
 mainContentHeaders[2].textContent = (siteContent["main-content"]["services-h4"])
@@ -94,6 +104,8 @@ mainContentText[2].textContent = (siteContent["main-content"]["services-content"
 mainContentText[3].textContent = (siteContent["main-content"]["product-content"])
 mainContentText[4].textContent = (siteContent["main-content"]["vision-content"])
 
+// Updating footer region //
+
 let footerHeader = document.querySelectorAll('h4');
 footerHeader[5].textContent = (siteContent["contact"]["contact-h4"])
 
@@ -103,4 +115,39 @@ footerText[6].textContent = (siteContent["contact"]["phone"])
 footerText[7].textContent = (siteContent["contact"]["email"])
 footerText[8].textContent = (siteContent["footer"]["copyright"])
 
-// let navColor = 
+// Additional stretch Styling///
+
+ctaHeader.style.color = "red";
+
+let contentBorders = document.querySelectorAll('.text-content h4');
+contentBorders.forEach(el => {
+  el.style.border = '1px solid grey';
+  el.style.textAlign = 'center';
+  el.style.margin = '0px 10px';
+})
+
+let fullBackground = document.querySelector('body');
+
+function darkMode() {
+  fullBackground.style.backgroundColor = "grey";
+  newNavElements2.textContent = "Light Mode";
+  newNavElements2.style.color = "black";
+  newNavElements2.style.backgroundColor = "white";
+  newNavElements2.setAttribute('id', 'lightModeButton');
+  newNavElements2.setAttribute('onclick', 'lightMode()');
+
+}
+
+function lightMode() {
+  fullBackground.style.backgroundColor = "white";
+  newNavElements2.textContent = "Dark Mode";
+  newNavElements2.style.color = "black";
+  newNavElements2.style.backgroundColor = "white";
+  newNavElements2.setAttribute('id', 'darkModeButton');
+  newNavElements2.setAttribute('onclick', 'darkMode()');
+}
+
+ //can't figure out why the background color keeps erroring out saying it's undefined and not changing
+
+
+
